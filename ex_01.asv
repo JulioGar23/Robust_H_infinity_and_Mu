@@ -14,7 +14,7 @@ rng(5, 'twister');
 % This command creates a 4-output, 5-input stable model and then takes its Hermitian
 % conjugate. This operation yields a 5-output, 4-input unstable model.
 % -----------------------------
-P = rss(3, 4, 5)'; % 3 states, 5 inputs, 4 outputs → transposed: 4 inputs, 5 outputs
+P = rss(3, 4, 3)'; % 3 states, 5 inputs, 4 outputs → transposed: 4 inputs, 5 outputs
 pole(P)            % Confirm that P is unstable. All the poles are in the right half-plane.
 
 % -----------------------------
@@ -24,7 +24,6 @@ A = P.A;
 B = P.B;
 C = P.C;
 D = P.D;
-
 
 disp('Matrix A:'); disp(A);
 disp('Matrix B:'); disp(B);
